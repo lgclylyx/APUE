@@ -122,7 +122,6 @@ public:
     bool unlock(){
         return pthread_rwlock_unlock( &m_rdlock ) == 0;
     }
-
 private:
     pthread_rwlock_t m_rdlock;
 };
