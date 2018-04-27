@@ -100,14 +100,14 @@ private:
 class rwlock
 {
 public:
-    rdlock()
+    rwlock()
     {
         if( pthread_rwlock_init( &m_rdlock, NULL ) != 0 )
         {
             throw std::exception();
         }
     }
-    ~rdlock()
+    ~rwlock()
     {
         pthread_rwlock_destroy(&m_rdlock);
     }
